@@ -7,7 +7,5 @@ My grandfather needs a covid vaccine but there is somehow no one stop shop for f
 `node . state sleeptime`
 
 Where:
-
-state is a state supported by CVS vaccine scheduling and
-
-sleeptime is a number of seconds to avoid being banned
+* state is a state supported by CVS vaccine scheduling and
+* sleeptime is a number of seconds to avoid being banned
