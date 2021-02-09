@@ -6,4 +6,6 @@ My grandfather needs a covid vaccine but there is somehow no one stop shop for f
 ## Usage
 `node . state`
 
-Where state is any state supported by CVS
+Where:
+        state is a state supported by CVS vaccine scheduling and
+        sleeptime is a number of seconds to avoid being banned
