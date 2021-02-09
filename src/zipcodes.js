@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const zipcodeRegex = /(\d\d\d\d\d)/g;
 
 module.exports = zipcodes = {
-  getZipcodes(state) {
+  async getZipcodes(state) {
     return new Promise((resolve) => {
       fetch(
         `https://www.zipcodestogo.com/${
@@ -11,7 +11,7 @@ module.exports = zipcodes = {
         }/`,
       ).then((res) =>
         res.text().then((site) => {
-          resolve(site.match(zipcodeRegex));
+          resolve([...new Set(site.match(zipcodeRegex))]);
         }),
       );
     });
