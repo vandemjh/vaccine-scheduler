@@ -4,6 +4,7 @@ module.exports = {
   async scrapeCovidAppointments(state, waitTime) {
     zipcodes = await require('./zipcodes').getZipcodes(state);
     toReturn = [];
+    waitCounter = 0;
     for (zipcode of [...zipcodes]) {
       toReturn.push(
         new Promise((resolve) => {
@@ -32,8 +33,8 @@ module.exports = {
                 (rej) => console.log(rej),
               ),
                 (rej) => console.log(rej);
-            }, waitTime * 1000);
-          });
+            });
+          }, waitTime * 1000 * waitCounter++);
         }),
       );
     }
