@@ -5,4 +5,5 @@ My grandfather needs a covid vaccine but there is somehow no one stop shop for f
 
 ## Usage
 `node . state`
+
 Where state is any state supported by CVS
