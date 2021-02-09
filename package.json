@@ -1,0 +1,21 @@
+{
+  "name": "vaccine-scheduler",
+  "version": "1.0.0",
+  "description": "Find Covid vaccine appointments",
+  "main": "index.ts",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "covid",
+    "vaccine"
+  ],
+  "author": "vandemjh",
+  "license": "ISC"
+}
