@@ -1,8 +1,18 @@
 const cvs = require('./src/scrape');
+const { usage } = require('./src/usage');
 var args = process.argv.slice(2);
 
-const WAIT_TIME = 1
+const state = args[0];
+const sleepTime = parseInt(args[1]) || 1;
 
-for (arg of [...args]) {
-    cvs.scrapeCovidAppointments(arg, WAIT_TIME).then(appt => console.log(appt))
+if (
+  args.length != 2 ||
+  (typeof state !== 'string' && typeof sleepTime !== 'number')
+) {
+  console.log(usage());
+  process.exit(1);
+} else {
+  cvs
+    .scrapeCovidAppointments(state, sleepTime)
+    .then((appt) => console.log(appt));
 }
